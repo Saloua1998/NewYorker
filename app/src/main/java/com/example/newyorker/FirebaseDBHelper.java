@@ -54,14 +54,14 @@ public class FirebaseDBHelper {
         });
     }
 
-//    public void addProduct(Products products, final DataStatus dataStatus){
-//        String key = mReferenceProducts.push().getKey();
-//        mReferenceProducts.child(key).setValue(products)
-//                .addOnSuccessListener(new OnSuccessListener<Void>() {
-//                    @Override
-//                    public void onSuccess(Void aVoid) {
-//                        dataStatus.DataIsInserted();
-//                    }
-//                })
-//    }
+    public void addProduct(Products products, final DataStatus dataStatus){
+        String key = mReferenceProducts.push().getKey();
+        mReferenceProducts.child(key).setValue(products)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        dataStatus.DataIsInserted();
+                    }
+                });
+    }
 }
