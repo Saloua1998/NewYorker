@@ -31,6 +31,7 @@ public class RecyclerView_Config {
             mBrand=itemView.findViewById(R.id.brand_txtView);
             mPrice=itemView.findViewById(R.id.price_txtView);
         }
+        //bind will receive data and set it in the variable
         public void bind(Products products, String key){
             mBrand.setText(products.getBrand());
             mPrice.setText(products.getPrice());
@@ -56,6 +57,7 @@ public class RecyclerView_Config {
             holder.bind(mProductList.get(position), mKeys.get(position));
         }
 
+        //returns the size of the product list
         @Override
         public int getItemCount() {return mProductList.size();}
     }

@@ -3,6 +3,7 @@ package com.example.newyorker;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class ProductListActivity extends AppCompatActivity {
         new FirebaseDBHelper().readProducts(new FirebaseDBHelper.DataStatus() {
             @Override
             public void DataIsLoaded(List<Products> products, List<String> keys) {
+                findViewById(R.id.progressBar).setVisibility(View.GONE);
                 new RecyclerView_Config().setConfig(mRecyclerView,ProductListActivity.this, products, keys);
             }
 
