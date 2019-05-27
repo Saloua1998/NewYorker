@@ -1,6 +1,7 @@
 package com.example.newyorker;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,6 +31,19 @@ public class RecyclerView_Config {
                     inflate(R.layout.product_list_item, parent, false));
             mBrand=itemView.findViewById(R.id.brand_txtView);
             mPrice=itemView.findViewById(R.id.price_txtView);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, ProductDetailsActivity.class)
+                            .putExtra("key", key)
+                            .putExtra("Brand", mBrand.getText().toString())
+                            .putExtra("Price", mPrice.getText().toString());
+
+                    mContext.startActivity(intent);
+
+                }
+            });
         }
         //bind will receive data and set it in the variable
         public void bind(Products products, String key){
