@@ -1,4 +1,4 @@
-package com.example.newyorker;
+package com.example.newyorker.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,7 +7,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
+import com.example.newyorker.FirebaseDBHelper;
+import com.example.newyorker.Products;
+import com.example.newyorker.R;
 import java.util.List;
 
 public class NewProduct extends AppCompatActivity {
@@ -16,9 +18,10 @@ public class NewProduct extends AppCompatActivity {
     private Spinner mProduct_categories_spinner;
     private Button mAdd_btn;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_product);
         mBrand_editTxt = findViewById(R.id.brand_editTxt);
@@ -32,6 +35,7 @@ public class NewProduct extends AppCompatActivity {
                 Products products = new Products();
                 products.setBrand(mBrand_editTxt.getText().toString());
                 products.setPrice(mPrice_editTxt.getText().toString());
+                products.setCategory(mProduct_categories_spinner.getSelectedItem().toString());
 
                 new FirebaseDBHelper().addProduct(products, new FirebaseDBHelper.DataStatus() {
                     @Override

@@ -1,4 +1,4 @@
-package com.example.newyorker;
+package com.example.newyorker.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,12 +7,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
+import com.example.newyorker.FirebaseDBHelper;
+import com.example.newyorker.Products;
+import com.example.newyorker.R;
+import com.example.newyorker.RecyclerView_Config;
 import java.util.List;
 
 public class ProductListActivity extends AppCompatActivity {
-
     private RecyclerView mRecyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,17 +30,14 @@ public class ProductListActivity extends AppCompatActivity {
 
             @Override
             public void DataIsInserted() {
-
             }
 
             @Override
             public void DataIsUpdated() {
-
             }
 
             @Override
             public void DataIsDeleted() {
-
             }
         });
     }
@@ -45,6 +45,7 @@ public class ProductListActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.productlist_activity_menu, menu);
+//        getMenuInflater().inflate(R.menu., menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -54,6 +55,8 @@ public class ProductListActivity extends AppCompatActivity {
             case R.id.new_product:
                 startActivity(new Intent(this, NewProduct.class));
                 return true;
+            case R.id.update_delete_product:
+                startActivity(new Intent(this, ProductDetailsActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }

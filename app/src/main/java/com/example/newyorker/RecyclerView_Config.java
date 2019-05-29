@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.newyorker.Activities.ProductDetailsActivity;
+
 import java.util.List;
 
 public class RecyclerView_Config {

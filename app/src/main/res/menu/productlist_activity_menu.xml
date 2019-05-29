@@ -5,6 +5,6 @@
         android:id="@+id/new_product"
         android:title="Product Toevoegen" />
     <item
-        android:id="@+id/product"
+        android:id="@+id/update_delete_product"
         android:title="Product Updaten/Verwijderen"/>
 </menu>

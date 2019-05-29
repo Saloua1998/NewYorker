@@ -1,4 +1,4 @@
-package com.example.newyorker;
+package com.example.newyorker.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +7,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.newyorker.FirebaseDBHelper;
+import com.example.newyorker.Products;
+import com.example.newyorker.R;
+
 import java.util.List;
 
 public class ProductDetailsActivity extends AppCompatActivity {
@@ -20,6 +25,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_details);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         key = getIntent().getStringExtra("key");
         brand = getIntent().getStringExtra("Brand");

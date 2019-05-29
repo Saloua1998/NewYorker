@@ -12,7 +12,7 @@ import java.util.List;
 
 //This class is responsible for manipulating the database
 public class FirebaseDBHelper {
-    private FirebaseDatabase mDB;
+    private FirebaseDatabase mDatabase;
     private DatabaseReference mReferenceProducts;
     private List<Products> products = new ArrayList<>();
 
@@ -24,9 +24,9 @@ public class FirebaseDBHelper {
     }
 
     public FirebaseDBHelper() {
-        mDB = FirebaseDatabase.getInstance();
+        mDatabase = FirebaseDatabase.getInstance();
         //Here we reference the node "Products" from the database and all its children
-        mReferenceProducts = mDB.getReference("Products");
+        mReferenceProducts = mDatabase.getReference("Products");
     }
 
     public void readProducts(final DataStatus dataStatus){
