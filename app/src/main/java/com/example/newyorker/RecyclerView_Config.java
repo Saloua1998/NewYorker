@@ -2,14 +2,12 @@ package com.example.newyorker;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import java.util.List;
 
 public class RecyclerView_Config {
@@ -23,25 +21,25 @@ public class RecyclerView_Config {
     }
 
     class ProductitemView extends RecyclerView.ViewHolder {
-        private TextView mBrand, mPrice;
+        private TextView mBrand, mPrice, mCategory;
         private String key;
 
         public ProductitemView(ViewGroup parent) {
             super(LayoutInflater.from(mContext).
                     inflate(R.layout.product_list_item, parent, false));
-            mBrand=itemView.findViewById(R.id.brand_txtView);
-            mPrice=itemView.findViewById(R.id.price_txtView);
+            mBrand = itemView.findViewById(R.id.brand_txtView);
+            mPrice = itemView.findViewById(R.id.price_txtView);
+            mCategory = itemView.findViewById(R.id.category_txtView);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(mContext, ProductDetailsActivity.class)
-                            .putExtra("key", key)
-                            .putExtra("Brand", mBrand.getText().toString())
-                            .putExtra("Price", mPrice.getText().toString());
-
+                public void onClick(View view) {
+                    Intent intent = new Intent(mContext, ProductDetailsActivity.class);
+                    intent.putExtra("key", key);
+                    intent.putExtra("Brand", mBrand.getText().toString());
+                    intent.putExtra("Price", mPrice.getText().toString());
+                    intent.putExtra("Category", mCategory.getText().toString());
                     mContext.startActivity(intent);
-
                 }
             });
         }
@@ -49,6 +47,7 @@ public class RecyclerView_Config {
         public void bind(Products products, String key){
             mBrand.setText(products.getBrand());
             mPrice.setText(products.getPrice());
+            mCategory.setText(products.getCategory());
             this.key = key;
         }
     }

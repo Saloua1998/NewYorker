@@ -32,6 +32,7 @@ public class NewProduct extends AppCompatActivity {
                 Products products = new Products();
                 products.setBrand(mBrand_editTxt.getText().toString());
                 products.setPrice(mPrice_editTxt.getText().toString());
+
                 new FirebaseDBHelper().addProduct(products, new FirebaseDBHelper.DataStatus() {
                     @Override
                     public void DataIsLoaded(List<Products> products, List<String> keys) {

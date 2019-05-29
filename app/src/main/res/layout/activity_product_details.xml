@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,14 +12,14 @@
         android:id="@+id/brand_editTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Brand"
+        android:hint="Merk"
         android:ems="10"
         android:inputType="textPersonName"/>
     <EditText
         android:id="@+id/price_editTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Price"
+        android:hint="Prijs"
         android:ems="10"
         android:inputType="textPersonName"/>
     <Spinner
