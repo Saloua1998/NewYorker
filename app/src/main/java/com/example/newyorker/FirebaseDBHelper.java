@@ -52,6 +52,7 @@ public class FirebaseDBHelper {
         });
     }
 
+<<<<<<< HEAD
     public void addProduct(Products products, final DataStatus dataStatus){
         String key = mReferenceProducts.push().getKey();
         mReferenceProducts.child(key).setValue(products)
@@ -81,4 +82,16 @@ public class FirebaseDBHelper {
                     }
                 });
     }
+=======
+//    public void addProduct(Products products, final DataStatus dataStatus){
+//        String key = mReferenceProducts.push().getKey();
+//        mReferenceProducts.child(key).setValue(products)
+//                .addOnSuccessListener(new OnSuccessListener<Void>() {
+//                    @Override
+//                    public void onSuccess(Void aVoid) {
+//                        dataStatus.DataIsInserted();
+//                    }
+//                })
+//    }
+>>>>>>> parent of c3a8252... now you can add a product
 }

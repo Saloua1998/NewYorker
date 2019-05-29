@@ -4,36 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".Activities.NewProduct"
     android:orientation="vertical"
     android:gravity="center"
     android:layout_margin="50dp">
+=======
+    tools:context=".NewProduct"
+    android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/brand_editTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Brand"
-        android:ems="10"
-        android:inputType="textPersonName"/>
 
-    <EditText
-        android:id="@+id/price_editTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Price"
-        android:ems="10"
-        android:inputType="textPersonName"/>
+>>>>>>> parent of c3a8252... now you can add a product
 
-    <Spinner
-        android:id="@+id/product_categories_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/product_cetegories" />
-    
-    <Button
-        android:id="@+id/add_btn"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Voeg Toe"/>
+
+
 </LinearLayout>

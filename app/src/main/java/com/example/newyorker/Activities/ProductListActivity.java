@@ -1,11 +1,8 @@
 package com.example.newyorker.Activities;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import com.example.newyorker.FirebaseDBHelper;
 import com.example.newyorker.Products;
@@ -41,6 +38,7 @@ public class ProductListActivity extends AppCompatActivity {
             }
         });
     }
+<<<<<<< HEAD:app/src/main/java/com/example/newyorker/Activities/ProductListActivity.java
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -60,4 +58,6 @@ public class ProductListActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+=======
+>>>>>>> parent of c3a8252... now you can add a product:app/src/main/java/com/example/newyorker/ProductListActivity.java
 }

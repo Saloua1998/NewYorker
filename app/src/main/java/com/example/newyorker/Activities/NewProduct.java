@@ -2,6 +2,7 @@ package com.example.newyorker.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+<<<<<<< HEAD:app/src/main/java/com/example/newyorker/Activities/NewProduct.java
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +18,10 @@ public class NewProduct extends AppCompatActivity {
     private EditText mPrice_editTxt;
     private Spinner mProduct_categories_spinner;
     private Button mAdd_btn;
+=======
+
+public class NewProduct extends AppCompatActivity {
+>>>>>>> parent of c3a8252... now you can add a product:app/src/main/java/com/example/newyorker/NewProduct.java
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,7 @@ public class NewProduct extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_product);
+<<<<<<< HEAD:app/src/main/java/com/example/newyorker/Activities/NewProduct.java
         mBrand_editTxt = findViewById(R.id.brand_editTxt);
         mPrice_editTxt = findViewById(R.id.price_editTxt);
         mProduct_categories_spinner=findViewById(R.id.product_categories_spinner);
@@ -60,5 +66,7 @@ public class NewProduct extends AppCompatActivity {
                 });
             }
         });
+=======
+>>>>>>> parent of c3a8252... now you can add a product:app/src/main/java/com/example/newyorker/NewProduct.java
     }
 }
